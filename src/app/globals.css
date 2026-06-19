@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #17202a;
+  --card: #ffffff;
+  --card-foreground: #17202a;
+  --primary: #315efb;
+  --primary-foreground: #ffffff;
+  --secondary: #edf2ff;
+  --secondary-foreground: #2749bd;
+  --muted: #f1f4f8;
+  --muted-foreground: #667085;
+  --accent: #eef3ff;
+  --accent-foreground: #244bc5;
+  --destructive: #e44d3a;
+  --destructive-foreground: #ffffff;
+  --border: #dfe4ec;
+  --input: #d5dbe5;
+  --ring: #315efb;
+  --sidebar: #111d2d;
+  --sidebar-foreground: #dce4f0;
+  --success: #16a05d;
+  --warning: #f59e0b;
+  --coral: #ff6f4f;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+}
+
+* { border-color: var(--border); }
+
+html, body { min-height: 100%; }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button, input, textarea, select { font: inherit; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+::selection { background: #dce5ff; color: #17202a; }
+
+.diagram-grid {
+  background-color: #ffffff;
+  background-image: radial-gradient(#d9dee7 0.75px, transparent 0.75px);
+  background-size: 18px 18px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-ui { transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease; }
+}

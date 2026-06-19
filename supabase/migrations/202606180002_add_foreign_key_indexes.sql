@@ -1,0 +1,15 @@
+create index if not exists workspaces_owner_idx on public.workspaces(owner_id);
+create index if not exists workspace_members_user_idx on public.workspace_members(user_id);
+create index if not exists org_charts_company_idx on public.org_charts(company_id);
+create index if not exists org_chart_nodes_workspace_idx on public.org_chart_nodes(workspace_id);
+create index if not exists org_chart_nodes_reports_to_idx on public.org_chart_nodes(reports_to_node_id);
+create index if not exists org_chart_edges_workspace_idx on public.org_chart_edges(workspace_id);
+create index if not exists org_chart_edges_source_idx on public.org_chart_edges(source_node_id);
+create index if not exists org_chart_edges_target_idx on public.org_chart_edges(target_node_id);
+create index if not exists process_maps_company_idx on public.process_maps(company_id);
+create index if not exists process_nodes_workspace_idx on public.process_nodes(workspace_id);
+create index if not exists process_edges_workspace_idx on public.process_edges(workspace_id);
+create index if not exists process_edges_source_idx on public.process_edges(source_node_id);
+create index if not exists process_edges_target_idx on public.process_edges(target_node_id);
+create index if not exists ai_generation_logs_workspace_idx on public.ai_generation_logs(workspace_id);
+create index if not exists ai_generation_logs_user_idx on public.ai_generation_logs(user_id);
